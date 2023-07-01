@@ -89,6 +89,7 @@ namespace VirtoCommerce.Storefront.Domain.Security
                 LockoutEnabled = userDto.LockoutEnabled ?? false,
                 EmailConfirmed = userDto.EmailConfirmed ?? false,
                 LockoutEndDateUtc = userDto.LockoutEndDateUtc,
+                LastLoginDate = userDto.LastLoginDate,
                 PasswordExpired = userDto.PasswordExpired ?? false,
                 PasswordHash = userDto.PasswordHash,
                 SecurityStamp = userDto.SecurityStamp,
@@ -133,6 +134,7 @@ namespace VirtoCommerce.Storefront.Domain.Security
                 EmailConfirmed = user.EmailConfirmed,
                 LockoutEnabled = user.LockoutEnabled,
                 LockoutEndDateUtc = user.LockoutEndDateUtc,
+                LastLoginDate = user.LastLoginDate,
                 TwoFactorEnabled = user.TwoFactorEnabled,
                 SecurityStamp = user.SecurityStamp,
                 PasswordHash = user.PasswordHash,
@@ -141,6 +143,7 @@ namespace VirtoCommerce.Storefront.Domain.Security
                 IsAdministrator = user.IsAdministrator,
                 PhoneNumber = user.PhoneNumber,
                 PhoneNumberConfirmed = user.PhoneNumberConfirmed,
+                PasswordExpired = user.PasswordExpired,
             };
 
             if (!user.Roles.IsNullOrEmpty())
